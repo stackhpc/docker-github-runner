@@ -10,7 +10,7 @@ RUN apt-get update -y && apt-get upgrade -y && useradd -m docker
 
 # install python and the packages the your code depends on along with jq so we can parse JSON
 # add additional packages as necessary
-RUN apt-get install -y curl jq build-essential libssl-dev libffi-dev python3 python3-venv python3-dev git
+RUN apt-get install -y curl jq build-essential libssl-dev libffi-dev python3 python3-venv python3-dev git docker.io
 
 # cd into the user directory, download and unzip the github actions runner
 RUN cd /home/docker && mkdir actions-runner && cd actions-runner \
